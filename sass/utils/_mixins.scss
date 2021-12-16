@@ -1,0 +1,10 @@
+// flex-basis calculation
+@mixin flexBasis($column) {
+  flex-basis: calc((100% - #{$cards-gap * ($column - 1)}) / #{$column});
+}
+
+// transition properties
+@mixin transitionProperties($duration: 'duration', $timing: 'timing') {
+  transition-duration: getTransition($duration);
+  transition-timing-function: getTransition($timing);
+}

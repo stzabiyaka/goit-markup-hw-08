@@ -1,0 +1,39 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+.social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 44px;
+  width: 44px;
+
+  color: getColor('icon');
+  border-radius: 50%;
+
+  transition-property: color, background-color;
+  @include transitionProperties();
+
+  &--white {
+    color: getColor('white-primary');
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: getColor('accent');
+    color: getColor('white-primary');
+    outline: none;
+  }
+}
+.social__icon {
+  display: block;
+  fill: currentColor;
+}

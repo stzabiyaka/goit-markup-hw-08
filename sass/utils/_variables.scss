@@ -1,0 +1,36 @@
+// site colors palette
+$colors: (
+  'white-primary': #ffffff,
+  'white-secondary': rgba(255, 255, 255, 0.6),
+  'background-secondary': #f5f4fa,
+  'background-dark': #2f303a,
+  'text-primary': #757575,
+  'text-title': #212121,
+  'accent': #2196f3,
+  'icon': #afb1b8,
+);
+
+// site fonts
+$fontPrimary: 'Roboto', sans-serif;
+$fontLogo: 'Raleway', sans-serif;
+
+// sections container width
+$containerWidth: 1200px;
+
+// transitions duration and timing
+$transitions: (
+  'duration': 250ms,
+  'timing': cubic-bezier(0.4, 0, 0.2, 1),
+);
+
+// gaps between cards size
+$cards-gap: 30px;
+
+// grids columns quantity
+$columns: (
+  'features': 4,
+  'specialisation': 3,
+  'team': 4,
+  'clients': 6,
+  'product-set': 3,
+);

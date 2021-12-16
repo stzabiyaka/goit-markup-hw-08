@@ -1,0 +1,14 @@
+.product-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * #{$cards-gap});
+  margin-left: calc(-1 * #{$cards-gap});
+}
+.product-set__item {
+  flex-basis: calc(100% / #{getColumn('product-set')} - #{$cards-gap});
+
+  margin-left: $cards-gap;
+  margin-top: $cards-gap;
+
+  background-color: getColor('white-primary');
+}

@@ -1,14 +1,31 @@
 .product-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * #{$cards-gap});
-  margin-left: calc(-1 * #{$cards-gap});
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$cards-gap});
+    margin-left: calc(-1 * #{$cards-gap});
+  }
 }
 .product-set__item {
-  flex-basis: calc(100% / #{getColumn('product-set')} - #{$cards-gap});
-
-  margin-left: $cards-gap;
-  margin-top: $cards-gap;
-
+  display: block;
   background-color: getColor('white-primary');
+  &:not(:last-child) {
+    margin-bottom: $cards-gap;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / #{getColumn('product-set-tablet')} - #{$cards-gap});
+
+    margin-left: $cards-gap;
+    margin-top: $cards-gap;
+    &:nth-child(n) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / #{getColumn('product-set-desktop')} - #{$cards-gap});
+  }
 }

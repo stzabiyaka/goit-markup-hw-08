@@ -26,8 +26,8 @@
   left: 50%;
 
   display: block;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
 
   background-color: getColor('white-primary');
@@ -39,6 +39,11 @@
 
   .modal-backdrop.is-hidden > & {
     transform: translate(-50%, -50%) scale(0);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -86,4 +91,8 @@
   text-align: center;
 
   color: getColor('text-title');
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.5;
+  }
 }

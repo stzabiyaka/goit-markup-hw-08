@@ -1,18 +1,21 @@
 .form-subscription {
-  display: flex;
-  align-items: center;
+  display: block;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 .form-subscription__input {
-  display: flex;
-  align-items: center;
-  width: 358px;
+  display: block;
   height: 50px;
+  width: 100%;
   margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding-left: 16px;
   padding-right: 16px;
+
+  margin-left: 0;
 
   color: getColor('white-primary');
   background-color: inherit;
@@ -32,5 +35,18 @@
   &:focus-within {
     border-color: getColor('accent');
     outline: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-right: 12px;
+
+    width: 358px;
   }
 }

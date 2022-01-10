@@ -1,12 +1,31 @@
 .features {
-  display: flex;
-  align-items: flex-start;
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .features__item {
-  @include flexBasis(getColumn('features'));
+  display: block;
 
   &:not(:last-child) {
-    margin-right: #{$cards-gap};
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include flexBasis(getColumn('features-tablet'));
+
+    @include rightGap(getColumn('features-tablet'));
+
+    @include noBottom(getColumn('features-tablet'));
+  }
+  @media screen and (min-width: $desktop) {
+    @include flexBasis(getColumn('features-desktop'));
+
+    @include rightGap(getColumn('features-desktop'));
+
+    @include noBottom(getColumn('features-desktop'));
   }
 }
 .features__icon {
@@ -25,8 +44,13 @@
   color: getColor('text-title');
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.17;
   text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 .features__text {
   font-size: 14px;

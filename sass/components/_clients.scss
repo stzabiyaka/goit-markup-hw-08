@@ -1,13 +1,36 @@
 .clients {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .clients__item {
-  @include flexBasis(getColumn('clients'));
+  margin-bottom: $cards-gap;
 
-  &:not(:last-child) {
-    margin-right: $cards-gap;
+  @include flexBasis(getColumn('clients-mobile'));
+
+  @include rightGap(getColumn('clients-mobile'));
+
+  @include noBottom(getColumn('clients-mobile'));
+
+  @media screen and (min-width: $tablet) {
+    @include flexBasis(getColumn('clients-tablet'));
+
+    @include rightGap(getColumn('clients-tablet'));
+
+    @include noBottom(getColumn('clients-tablet'));
   }
+
+  @media screen and (min-width: $desktop) {
+    @include flexBasis(getColumn('clients-desktop'));
+
+    @include rightGap(getColumn('clients-desktop'));
+
+    @include noBottom(getColumn('clients-desktop'));
+  }
+
+  // &:not(:last-child) {
+  //   margin-right: $cards-gap;
+  // }
 }
 
 .clients__link {

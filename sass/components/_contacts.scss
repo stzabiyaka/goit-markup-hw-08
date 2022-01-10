@@ -1,7 +1,15 @@
 .contacts {
-  display: flex;
-  align-items: center;
+  display: none;
   margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 .contacts__item {
   &:not(:last-child) {
@@ -14,10 +22,15 @@
 
   color: getColor('text-primary');
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   transition-property: color;
   @include transitionProperties();
@@ -25,6 +38,7 @@
   &--semitransparent {
     color: getColor('white-secondary');
     font-weight: normal;
+    font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
   }
@@ -42,8 +56,12 @@
 
 .contacts__icon {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 8px;
 
   vertical-align: middle;
   fill: currentColor;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
 }

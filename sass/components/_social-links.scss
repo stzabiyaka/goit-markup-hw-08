@@ -1,6 +1,9 @@
 .social {
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .social__item {
   &:not(:last-child) {

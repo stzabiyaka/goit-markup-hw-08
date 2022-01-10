@@ -3,24 +3,47 @@
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
-  margin-right: 93px;
+  margin-right: 0;
 
   color: getColor('text-title');
   font-family: $fontLogo;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.174;
   text-decoration: none;
 
   &:focus {
     outline: getColor('accent') solid 1px;
   }
 
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    margin-right: 93px;
+  }
+
   &--inverse {
+    display: block;
     margin-bottom: 20px;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
 
     color: getColor('white-primary');
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      margin-left: 100px;
+      margin-right: 0;
+
+      text-align: left;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 0;
+    }
   }
 
   &--accent {

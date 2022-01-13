@@ -1,31 +1,62 @@
 .contacts {
-  display: none;
-  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
 
   @media screen and (min-width: $tablet) {
-    display: block;
+    flex-direction: column;
+    margin-left: auto;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: $desktop) {
-    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     align-items: center;
   }
 }
 .contacts__item {
-  &:not(:last-child) {
-    margin-right: 50px;
+  &:last-child {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:first-child {
+      margin-right: $cards-gap;
+    }
   }
 }
 .contacts__link {
   margin-top: 0;
   margin-bottom: 0;
-
-  color: getColor('text-primary');
   font-weight: 500;
-  font-size: 12px;
+  font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  color: getColor('text-primary');
+
+  @media screen and (max-width: ($tablet - 1)) {
+    .contacts__item:last-child & {
+      font-size: 34px;
+      line-height: 1.18;
+      color: getColor('accent');
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: 1.17;
+    color: grtColor('text-primary');
+  }
 
   @media screen and (min-width: $desktop) {
     font-size: 14px;
@@ -62,8 +93,14 @@
   fill: currentColor;
 
   &--mail {
-    width: 14px;
-    height: 10px;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: inline-block;
+      width: 14px;
+      height: 10px;
+    }
+
     @media screen and (min-width: $desktop) {
       margin-right: 10px;
       width: 16px;
@@ -72,8 +109,13 @@
   }
 
   &--phone {
-    width: 10px;
-    height: 14px;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: inline-block;
+      width: 10px;
+      height: 14px;
+    }
 
     @media screen and (min-width: $desktop) {
       margin-right: 10px;

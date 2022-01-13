@@ -10,26 +10,20 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   @media screen and (min-width: $desktop) {
-    align-items: flex-start;
+    justify-content: space-between;
   }
 }
 .footer__social-container {
-  /* margin-right: 93px; */
   margin-bottom: 60px;
 
   color: getColor('white-primary');
 
-  @media screen and (min-width: $tablet) {
-    margin-right: 74px;
-  }
-
   @media screen and (min-width: $desktop) {
     padding-top: 12px;
-    margin-right: 0;
   }
 }
 .footer__title {
@@ -43,34 +37,20 @@
   text-align: center;
 
   @media screen and (min-width: $desktop) {
-    text-aligh: left;
+    text-align: left;
   }
 }
 .footer__subscription-container {
-  @media screen and (min-width: $tablet) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   @media screen and (min-width: $desktop) {
     padding-top: 12px;
     margin-right: 0;
-    margin-left: auto;
+    margin-left: 0;
   }
 }
 /* address component */
 .address {
   font-style: normal;
   margin-bottom: 60px;
-
-  @media screen and (min-width: $tablet) {
-    margin-left: 61px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    margin-left: 0;
-    margin-right: 70px;
-  }
 }
 .address__item {
   text-align: center;

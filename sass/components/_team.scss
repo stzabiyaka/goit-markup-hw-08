@@ -36,23 +36,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team__thumb {
-  display: block;
-  height: 460px;
-
-  @media screen and (min-width: $tablet) {
-    height: 374px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    height: 260px;
-  }
-}
-
-.team__image {
-  @include thumbImage();
-}
-
 .team__meta {
   padding-top: 30px;
   padding-bottom: 30px;

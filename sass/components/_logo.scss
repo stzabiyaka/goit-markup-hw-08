@@ -28,21 +28,13 @@
   &--inverse {
     display: block;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 0;
 
     color: getColor('white-primary');
     text-align: center;
 
-    @media screen and (min-width: $tablet) {
-      margin-left: 100px;
-      margin-right: 0;
-
-      text-align: left;
-    }
-
     @media screen and (min-width: $desktop) {
-      margin-left: 0;
+      text-align: left;
     }
   }
 

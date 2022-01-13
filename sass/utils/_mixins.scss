@@ -10,11 +10,12 @@
 }
 
 // margin-right gaps
-@mixin rightGap($column) {
+@mixin rightGap($column, $gap: $cards-gap) {
   &:not(:nth-child(#{$column}n)) {
-    margin-right: $cards-gap;
+    margin-right: $gap;
   }
-  &:nth-child(#{$column}n) {
+  &:nth-child(#{$column}n),
+  &:last-child {
     margin-right: 0;
   }
 }

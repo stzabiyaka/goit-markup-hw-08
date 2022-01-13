@@ -1,6 +1,7 @@
 .hero {
   $color-gradient: rgba(47, 48, 58, 0.4);
   $image-gradient: linear-gradient(to right, $color-gradient, $color-gradient);
+
   padding-top: 118px;
   padding-bottom: 118px;
   // height: 400px;
@@ -38,7 +39,6 @@
   }
 
   @media screen and (min-width: $desktop) {
-    // height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -49,13 +49,10 @@
   color: getColor('white-primary');
   font-weight: 900;
   font-size: 26px;
-  line-height: 1.61;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  @media screen and (min-width: $tablet) {
-  }
 
   @media screen and (min-width: $desktop) {
     font-size: 44px;

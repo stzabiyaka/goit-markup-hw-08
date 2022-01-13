@@ -27,10 +27,6 @@
 
     @include noBottom(getColumn('clients-desktop'));
   }
-
-  // &:not(:last-child) {
-  //   margin-right: $cards-gap;
-  // }
 }
 
 .clients__link {

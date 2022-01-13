@@ -19,7 +19,8 @@
     margin-bottom: 30px;
 
     @media screen and (min-width: $desktop) {
-      padding-left: 12px;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -38,7 +39,7 @@
   margin-bottom: 4px;
 
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.01em;
 }
 .form__input {
@@ -95,6 +96,8 @@
 .form__label-checkbox {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 
   font-size: 12px;
   line-height: 1.17;

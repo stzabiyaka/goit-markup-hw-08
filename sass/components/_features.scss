@@ -10,7 +10,7 @@
   display: block;
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: $cards-gap;
   }
 
   @media screen and (min-width: $tablet) {
@@ -44,11 +44,11 @@
   color: getColor('text-title');
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.17;
+  line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     text-align: left;
   }
 }

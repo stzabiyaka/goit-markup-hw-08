@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: $tablet) {
     justify-content: center;
@@ -13,16 +13,21 @@
     margin-bottom: 50px;
   }
 }
+
 .filter__item {
-  margin-bottom: 15px;
   &:not(:last-child) {
     margin-right: 8px;
   }
 
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 0;
+  @media screen and (max-width: ($tablet - 1)) {
+    margin-bottom: 15px;
+
+    @include rightGap(3, 8px);
+
+    @include noBottom(3);
   }
 }
+
 .filter__button {
   min-height: 38px;
   padding-top: 6px;

@@ -11,8 +11,11 @@
 .product-set__item {
   display: block;
   background-color: getColor('white-primary');
-  &:not(:last-child) {
-    margin-bottom: $cards-gap;
+
+  @media screen and (max-width: ($tablet - 1)) {
+    &:not(:last-child) {
+      margin-bottom: $cards-gap;
+    }
   }
 
   @media screen and (min-width: $tablet) {
@@ -20,9 +23,6 @@
 
     margin-left: $cards-gap;
     margin-top: $cards-gap;
-    &:nth-child(n) {
-      margin-bottom: 0;
-    }
   }
 
   @media screen and (min-width: $desktop) {

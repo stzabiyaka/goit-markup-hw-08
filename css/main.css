@@ -1544,7 +1544,7 @@ body {
   .filter__item:nth-child(3n), .filter__item:last-child {
     margin-right: 0;
   }
-  .filter__item:nth-last-child(-n + 3) {
+  .filter__item:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
 }

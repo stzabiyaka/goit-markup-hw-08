@@ -22,6 +22,10 @@
 
   color: getColor('white-primary');
 
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: $desktop) {
     padding-top: 12px;
   }
@@ -51,6 +55,10 @@
 .address {
   font-style: normal;
   margin-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 .address__item {
   text-align: center;

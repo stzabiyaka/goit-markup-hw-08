@@ -3,10 +3,12 @@
   flex-wrap: wrap;
   flex-direction: column-reverse;
   margin-bottom: 64px;
+  margin-top: auto;
 
   @media screen and (min-width: $tablet) {
     flex-direction: column;
     margin-left: auto;
+    margin-top: 0;
     margin-bottom: 0;
   }
 

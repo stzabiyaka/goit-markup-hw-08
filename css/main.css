@@ -423,7 +423,9 @@ body.modal-open, body.menu-open {
 }
 
 .menu__button {
-  display: block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-left: auto;
   margin-right: 0;
   margin-top: 0;
@@ -1515,7 +1517,14 @@ body.modal-open, body.menu-open {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-left: -8px;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter {
+    margin-top: -15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1533,16 +1542,13 @@ body.modal-open, body.menu-open {
   }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter__item {
+  margin-left: 8px;
 }
 
 @media screen and (max-width: 767px) {
   .filter__item {
-    margin-bottom: 15px;
-  }
-  .filter__item:nth-last-child(-n + 2) {
-    margin-bottom: 0;
+    margin-top: 15px;
   }
 }
 
